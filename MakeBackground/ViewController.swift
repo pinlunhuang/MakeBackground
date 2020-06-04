@@ -46,12 +46,32 @@ class ViewController: UIViewController {
             self.colorView.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         }
         
+        
         DispatchQueue.main.async {
+
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+            
             self.view.insertSubview(self.colorView, at: 0)
         }
 
         
         
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    //MARK: - Save Image callback
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+
+        if let error = error {
+            print(error.localizedDescription)
+        } else {
+            print("Success")
+        }
     }
     
 
