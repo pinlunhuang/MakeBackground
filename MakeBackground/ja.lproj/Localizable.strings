@@ -7,5 +7,5 @@
 */
 
 "appName" = "Make Background";
-"chooseColor" = "色を選ぶ";
+"saveImage" = "画像を保存する";
 "choosePhoto" = "写真から色を選ぶ";

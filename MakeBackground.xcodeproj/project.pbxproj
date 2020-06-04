@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E440A8632488D52100B3CC7C /* PixelExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440A8622488D52100B3CC7C /* PixelExtractor.swift */; };
+		E440A8652488DC6200B3CC7C /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440A8642488DC6200B3CC7C /* ColorPickerViewController.swift */; };
 		E468D4142488A749007D4330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4132488A749007D4330 /* AppDelegate.swift */; };
 		E468D4162488A749007D4330 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4152488A749007D4330 /* SceneDelegate.swift */; };
 		E468D4182488A749007D4330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4172488A749007D4330 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		E440A8622488D52100B3CC7C /* PixelExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelExtractor.swift; sourceTree = "<group>"; };
+		E440A8642488DC6200B3CC7C /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		E468D4102488A749007D4330 /* MakeBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E468D4132488A749007D4330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E468D4152488A749007D4330 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				E468D4132488A749007D4330 /* AppDelegate.swift */,
 				E468D4152488A749007D4330 /* SceneDelegate.swift */,
 				E468D4172488A749007D4330 /* ViewController.swift */,
+				E440A8642488DC6200B3CC7C /* ColorPickerViewController.swift */,
 				E468D4192488A749007D4330 /* Main.storyboard */,
 				E468D41C2488A74A007D4330 /* Assets.xcassets */,
 				E468D41E2488A74A007D4330 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E440A8652488DC6200B3CC7C /* ColorPickerViewController.swift in Sources */,
 				E468D4182488A749007D4330 /* ViewController.swift in Sources */,
 				E440A8632488D52100B3CC7C /* PixelExtractor.swift in Sources */,
 				E468D4142488A749007D4330 /* AppDelegate.swift in Sources */,
