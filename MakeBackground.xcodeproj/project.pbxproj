@@ -13,6 +13,7 @@
 		E468D41B2488A749007D4330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E468D4192488A749007D4330 /* Main.storyboard */; };
 		E468D41D2488A74A007D4330 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E468D41C2488A74A007D4330 /* Assets.xcassets */; };
 		E468D4202488A74A007D4330 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E468D41E2488A74A007D4330 /* LaunchScreen.storyboard */; };
+		E468D42D2488B129007D4330 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E468D42F2488B129007D4330 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,11 @@
 		E468D41C2488A74A007D4330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E468D41F2488A74A007D4330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E468D4212488A74A007D4330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E468D4272488B0C7007D4330 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E468D4282488B0D2007D4330 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		E468D42E2488B129007D4330 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E468D4302488B138007D4330 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E468D4312488B13B007D4330 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 				E468D41C2488A74A007D4330 /* Assets.xcassets */,
 				E468D41E2488A74A007D4330 /* LaunchScreen.storyboard */,
 				E468D4212488A74A007D4330 /* Info.plist */,
+				E468D42F2488B129007D4330 /* Localizable.strings */,
 			);
 			path = MakeBackground;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = E468D4072488A749007D4330;
 			productRefGroup = E468D4112488A749007D4330 /* Products */;
@@ -126,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E468D4202488A74A007D4330 /* LaunchScreen.storyboard in Resources */,
+				E468D42D2488B129007D4330 /* Localizable.strings in Resources */,
 				E468D41D2488A74A007D4330 /* Assets.xcassets in Resources */,
 				E468D41B2488A749007D4330 /* Main.storyboard in Resources */,
 			);
@@ -151,6 +161,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				E468D41A2488A749007D4330 /* Base */,
+				E468D4272488B0C7007D4330 /* zh-Hant */,
+				E468D4282488B0D2007D4330 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -163,6 +175,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		E468D42F2488B129007D4330 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E468D42E2488B129007D4330 /* en */,
+				E468D4302488B138007D4330 /* zh-Hant */,
+				E468D4312488B13B007D4330 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -170,6 +192,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -230,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

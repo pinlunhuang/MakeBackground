@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MakeBackground
+
+  Created by Pinlun on 2020/6/4.
+  Copyright © 2020 PINLUNDEV. All rights reserved.
+*/
+
+"appName" = "Make Background";
+"chooseColor" = "色を選ぶ";
+"choosePhoto" = "写真から色を選ぶ";
