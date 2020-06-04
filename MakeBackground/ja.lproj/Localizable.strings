@@ -9,3 +9,5 @@
 "appName" = "Make Background";
 "saveImage" = "画像を保存する";
 "choosePhoto" = "写真から色を選ぶ";
+"saveSuccess" = "保存できませんでした";
+

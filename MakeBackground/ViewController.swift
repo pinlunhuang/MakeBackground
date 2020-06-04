@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ViewController: UIViewController, UINavigationControllerDelegate, ModalDelegate {
     
@@ -72,11 +73,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, ModalDel
     //MARK: - Save Image callback
 
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-
         if let error = error {
             print(error.localizedDescription)
+            let hud = JGProgressHUD.init(style: .dark)
+            hud.indicatorView = nil
+            hud.textLabel.text = NSLocalizedString("saveError", comment: "")
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
         } else {
-            print("Success")
+            let hud = JGProgressHUD.init(style: .dark)
+            hud.textLabel.text = NSLocalizedString("saveSuccess", comment: "")
+            hud.indicatorView = nil
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
         }
     }
     

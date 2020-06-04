@@ -9,3 +9,5 @@
 "appName" = "Make Background";
 "saveImage" = "Save Image";
 "choosePhoto" = "Pick color from photo";
+"saveSuccess" = "Success";
+"saveError" = "Error";

@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E440A8632488D52100B3CC7C /* PixelExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440A8622488D52100B3CC7C /* PixelExtractor.swift */; };
 		E440A8652488DC6200B3CC7C /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440A8642488DC6200B3CC7C /* ColorPickerViewController.swift */; };
+		E440A8682489202900B3CC7C /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = E440A8672489202900B3CC7C /* JGProgressHUD */; };
 		E468D4142488A749007D4330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4132488A749007D4330 /* AppDelegate.swift */; };
 		E468D4162488A749007D4330 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4152488A749007D4330 /* SceneDelegate.swift */; };
 		E468D4182488A749007D4330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4172488A749007D4330 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E440A8682489202900B3CC7C /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +98,9 @@
 			dependencies = (
 			);
 			name = MakeBackground;
+			packageProductDependencies = (
+				E440A8672489202900B3CC7C /* JGProgressHUD */,
+			);
 			productName = MakeBackground;
 			productReference = E468D4102488A749007D4330 /* MakeBackground.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +131,9 @@
 				ja,
 			);
 			mainGroup = E468D4072488A749007D4330;
+			packageReferences = (
+				E440A8662489202900B3CC7C /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = E468D4112488A749007D4330 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E440A8662489202900B3CC7C /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E440A8672489202900B3CC7C /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E440A8662489202900B3CC7C /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E468D4082488A749007D4330 /* Project object */;
 }
