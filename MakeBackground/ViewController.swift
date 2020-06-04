@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var chooseColorButton: UIButton!
     @IBOutlet weak var choosePhotoButton: UIButton!
     
     var colorView = UIView()
+    
+    var photoForPickingColor: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,15 +55,16 @@ class ViewController: UIViewController {
             
             self.view.insertSubview(self.colorView, at: 0)
         }
-
-        
-        
     }
     
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
+    @IBAction func choosePhotoClick(_ sender: Any) {
+        self.accessGallery()
     }
+    
+//    func getDocumentsDirectory() -> URL {
+//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        return paths[0]
+//    }
     
     //MARK: - Save Image callback
 
@@ -74,7 +77,34 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Access Gallery
+    
+    func accessGallery() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let galleryController = UIImagePickerController()
+            galleryController.delegate = self
+            galleryController.allowsEditing = true
+            galleryController.sourceType = .photoLibrary
+            self.present(galleryController, animated: true, completion: nil)
+        }
+    }
+    
+}
 
-
+extension ViewController: UIImagePickerControllerDelegate {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        guard let chosenImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+        
+        self.photoForPickingColor = chosenImage
+        print(chosenImage.size)
+    }
 }
 

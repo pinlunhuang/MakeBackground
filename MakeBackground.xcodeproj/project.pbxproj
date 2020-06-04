@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E440A8632488D52100B3CC7C /* PixelExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440A8622488D52100B3CC7C /* PixelExtractor.swift */; };
 		E468D4142488A749007D4330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4132488A749007D4330 /* AppDelegate.swift */; };
 		E468D4162488A749007D4330 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4152488A749007D4330 /* SceneDelegate.swift */; };
 		E468D4182488A749007D4330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E468D4172488A749007D4330 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E440A8622488D52100B3CC7C /* PixelExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelExtractor.swift; sourceTree = "<group>"; };
 		E468D4102488A749007D4330 /* MakeBackground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeBackground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E468D4132488A749007D4330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E468D4152488A749007D4330 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				E468D41E2488A74A007D4330 /* LaunchScreen.storyboard */,
 				E468D4212488A74A007D4330 /* Info.plist */,
 				E468D42F2488B129007D4330 /* Localizable.strings */,
+				E440A8622488D52100B3CC7C /* PixelExtractor.swift */,
 			);
 			path = MakeBackground;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E468D4182488A749007D4330 /* ViewController.swift in Sources */,
+				E440A8632488D52100B3CC7C /* PixelExtractor.swift in Sources */,
 				E468D4142488A749007D4330 /* AppDelegate.swift in Sources */,
 				E468D4162488A749007D4330 /* SceneDelegate.swift in Sources */,
 			);
