@@ -18,6 +18,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, ModalDel
     var chosenColor: UIColor?
     var photoForPickingColor: UIImage?
     
+    let galleryController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
@@ -93,7 +95,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, ModalDel
     
     func accessGallery() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            let galleryController = UIImagePickerController()
             galleryController.delegate = self
             galleryController.allowsEditing = false
             galleryController.sourceType = .photoLibrary
