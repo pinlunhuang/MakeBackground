@@ -26,6 +26,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, ModalDel
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        self.view.backgroundColor = randomColor()
         if self.chosenColor == nil {
             self.saveImageButton.isHidden = true
         } else {
@@ -67,10 +69,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, ModalDel
         self.accessGallery()
     }
     
-//    func getDocumentsDirectory() -> URL {
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        return paths[0]
-//    }
+    //MARK: - Random Color
+    
+    func randomColor() -> UIColor {
+        return UIColor(red: .random(in: 0...1),
+                       green: .random(in: 0...1),
+                       blue: .random(in: 0...1),
+                       alpha: 1.0)
+    }
+
     
     //MARK: - Save Image callback
 

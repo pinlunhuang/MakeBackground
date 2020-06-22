@@ -51,7 +51,6 @@ class ColorPickerViewController: UIViewController {
         let touch = touches.first
         if let point = touch?.location(in: self.pickedImage) {
             let color = pickedImage.getPixelColorAt(point: point)
-            print(color)
             DispatchQueue.main.async {
                 self.pickedColor.backgroundColor = color
                 self.chosenColor = color
