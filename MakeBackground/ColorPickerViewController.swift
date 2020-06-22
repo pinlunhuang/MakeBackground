@@ -23,14 +23,13 @@ class ColorPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
-//        self.pickedImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pickColor(tapGestureRecognizer:))))
     }
     
     func setUpView() {
         self.pickedImage.image = chosenImage
         pickedColor.layer.cornerRadius = 30
-        pickedColor.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        pickedColor.layer.borderWidth = 3
+        pickedColor.layer.borderColor = UIColor(named: "pickedColorBorder")?.cgColor
+        pickedColor.layer.borderWidth = 2.2
         okButton.setTitle("OK", for: .normal)
         okButton.setTitle("OK", for: .highlighted)
         okButton.backgroundColor = #colorLiteral(red: 0.1088050976, green: 0.7243837118, blue: 0.331433624, alpha: 1)
@@ -48,23 +47,14 @@ class ColorPickerViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
-//    @objc func pickColor(tapGestureRecognizer: UITapGestureRecognizer) {
-//        self.chosenColor = pickedImage.image?.getPixelColor(atLocation: self.touchLocation ?? CGPoint(x: 0, y: 0), withFrameSize: pickedImage.frame.size)
-//        print(self.chosenColor)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//            self.pickedImage.backgroundColor = self.chosenColor
-//        }
-//    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            self.touchLocation = touch.location(in: self.pickedImage)
-            print(touchLocation!.x)
-            print(touchLocation!.y)
-            self.chosenColor = pickedImage.image?.getPixelColor(atLocation: self.touchLocation ?? CGPoint(x: 0, y: 0), withFrameSize: pickedImage.frame.size)
+        let touch = touches.first
+        if let point = touch?.location(in: self.pickedImage) {
+            let color = pickedImage.getPixelColorAt(point: point)
+            print(color)
             DispatchQueue.main.async {
-                self.pickedColor.backgroundColor = self.chosenColor
+                self.pickedColor.backgroundColor = color
+                self.chosenColor = color
             }
         }
     }
